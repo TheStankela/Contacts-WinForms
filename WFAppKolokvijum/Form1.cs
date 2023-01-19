@@ -148,6 +148,7 @@ namespace WFAppKolokvijum
         }
         private void btnObrisi_Click(object sender, EventArgs e)
         {
+          
             if (txtId.Text == null)
             {
                 MessageBox.Show("Morate selektovati kontakt koji zelite da obrisete!");

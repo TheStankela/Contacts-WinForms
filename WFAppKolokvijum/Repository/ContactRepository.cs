@@ -72,7 +72,7 @@ namespace WFAppKolokvijum.Repository
             try
             {
                 con.Open();
-                var querry = "SELECT * FROM Kontakti WHERE FirstName like '%" + name + "%'";
+                var querry = "SELECT * FROM Kontakti WHERE FirstName LIKE '%" + name + "%' OR LastName LIKE '%"+ name +"%'";
                 var command = new SqlCommand(querry, con);
                 var reader = command.ExecuteReader();
                 while (reader.Read())
